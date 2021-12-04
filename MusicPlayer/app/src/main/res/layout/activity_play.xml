@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Play">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/back_1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.bistu.musicplayer.CircularImageView
+                    android:id="@+id/picture"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:src="@mipmap/back_1" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/song"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:text="播放曲目"
+            android:layout_marginLeft="5dp"
+            android:textSize="30sp"
+            android:textColor="#fAfafa"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+
+
+        <SeekBar
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/seekbar"
+            android:max="100"
+            android:min="0"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="#fff"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/time_now_minute"
+                    android:text="00"
+                    android:gravity="top|end"/>
+                <TextView
+                    android:textColor="#fff"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/time_now_second"
+                    android:text="00"
+                    android:gravity="top|left"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"></LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:textColor="#fff"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/music_time_minute"
+                    android:layout_weight="0.8"
+                    android:text="00"
+                    android:gravity="top|end"/>
+                <TextView
+                    android:textColor="#fff"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/music_time_seconds"
+                    android:layout_weight="0.8"
+                    android:text="00"
+                    android:gravity="top|left"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <TextView
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="暂时没有歌词"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="30dp"
+            >
+
+            <ImageButton
+                android:id="@+id/last"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:text="上一首"
+                android:layout_marginBottom="45dp"
+                android:background="@mipmap/last"/>
+
+            <ImageButton
+                android:layout_centerHorizontal="true"
+                android:id="@+id/button_player"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/play"
+                android:layout_marginBottom="30dp"
+                android:text="播放" />
+
+            <ImageButton
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:text="下一首"
+                android:id="@+id/next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="45dp"
+                android:background="@mipmap/next"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
